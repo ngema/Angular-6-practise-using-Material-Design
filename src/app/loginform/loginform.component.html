@@ -1,0 +1,31 @@
+<div class="container">
+<div id="size"><header>TACCSO UKZN</header></div>
+
+<div id="login">
+<form (submit)="loginuser($event)">
+<div >
+  <mat-form-field appearance="outline"  class="usernamee">
+    <mat-label >Username</mat-label>
+    <input matInput placeholder="Enter Username" type="text" id="w" >
+    <mat-hint>Hint:215...</mat-hint>
+  </mat-form-field>
+</div> 
+<br>
+<div >
+  <mat-form-field appearance="outline">
+    <mat-label id="labell">Password</mat-label>
+    <input matInput type="password" placeholder="Enter Password" [type]="hide? 'password':'text'">
+    <mat-icon matSuffix (click)="hide=!hide">{{hide? 'visibility_off':'visibility'}}</mat-icon>
+    <mat-hint color="warn" *ngIf="password">Entered an incorrect password</mat-hint>
+  </mat-form-field>
+</div>
+<br>
+<div class="container" >
+  <button mat-raised-button color="primary" value="Login">Login</button>
+  <button mat-button color="primary" value="password" id="l">Forgot Password</button><br><br>
+  <button mat-button color="primary" value="Register">Register An Acoount</button>
+</div>
+
+</form>
+</div>
+</div>
