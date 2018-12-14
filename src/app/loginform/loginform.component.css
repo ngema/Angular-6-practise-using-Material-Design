@@ -1,8 +1,12 @@
-header{
+#size{
     text-align:center;
     padding: 20px 0;
     font-size:50px;
-    border-bottom: 2px solid lightblue;
+    
+  
+}
+mat-card {
+    background-color: lightblue;
 }
 
 #login{
