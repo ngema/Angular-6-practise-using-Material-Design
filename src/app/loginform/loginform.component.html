@@ -1,12 +1,14 @@
-<div class="container">
-  <mat-card >
-    <mat-card-header id="size">
+<div class="container" id="login">
+  <mat-card  class="cardwidth">
+    <mat-card-header  >
      <img  mat-card-avatar src="assets/image/material.png" alt="No image">
+      <br>
       <mat-card-title> TACCSO UKZN </mat-card-title>
       <mat-card-subtitle>Slogan</mat-card-subtitle>
-</mat-card-header>
-</mat-card>
-<div id="login">
+    </mat-card-header>
+
+<mat-card-content>
+<div >
 <form (submit)="loginuser($event)">
 <div >
   <mat-form-field appearance="outline"  class="usernamee">
@@ -17,7 +19,7 @@
 </div> 
 <br>
 <div >
-  <mat-form-field appearance="outline">
+  <mat-form-field appearance="outline" class="usernamee">
     <mat-label id="labell">Password</mat-label>
     <input matInput type="password" placeholder="Enter Password" [type]="hide? 'password':'text'">
     <mat-icon matSuffix (click)="hide=!hide">{{hide? 'visibility_off':'visibility'}}</mat-icon>
@@ -25,12 +27,17 @@
   </mat-form-field>
 </div>
 <br>
-<div class="container" >
-  <button mat-raised-button color="primary" value="Login">Login</button>
-  <button mat-button color="primary" value="password" id="l">Forgot Password</button><br><br>
-  <button mat-button color="primary" value="Register">Register An Acoount</button>
+<div >
+  <button mat-raised-button color="primary" value="Login" routerLink="/dashboard" class="usernamee">Login</button>
+  <div id="login">
+  <button mat-button color="primary" value="password" id="equalposition">Forgot Password</button><br><br>
+  <button mat-button color="primary" value="Register" id="l" >Register An Acount</button>
+   </div>
 </div>
 
 </form>
 </div>
+</mat-card-content>
+
+</mat-card>
 </div>

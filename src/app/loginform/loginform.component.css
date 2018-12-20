@@ -1,23 +1,34 @@
-#size{
+/*#size{
     text-align:center;
     padding: 20px 0;
     font-size:50px;
     
   
+}*/
+.cardwidth{
+    width: 30%;
+
 }
-mat-card {
-    background-color: lightblue;
-}
+
 
 #login{
     display: flex;
     justify-content: center;
     align-items: center;
     padding-top: 5%;
+    
 }
-#l {
+mat-card-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*#l {
     float: right;
-}
+    padding-top: 0px;
+    margin-top: 0px;
+}*/
 .usernamee{
     width: 100%;
 }
