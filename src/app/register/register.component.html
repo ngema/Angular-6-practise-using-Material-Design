@@ -1,0 +1,43 @@
+<!--<p>{{newusername}}</p>
+<p>{{newpassword}}</p> NB:DO NOT CONSIDER
+-->
+<div class="container" id="login">
+  <mat-card class="cardwidth">
+  <form >
+    <mat-card-header>Registration Here!!!</mat-card-header>
+    <mat-card-content>
+      <div>    
+          <mat-form-field appearance="outline" class="usernamee">
+            <mat-label>Email</mat-label>
+            <input type="email" matInput placeholder="Enter your email" name="email">
+          </mat-form-field>
+      </div>
+    <div>    
+      <mat-form-field appearance="outline"class="usernamee">
+          <mat-label>Username</mat-label>
+          <input type="text" matInput placeholder="Enter your name" [(ngModel)]="edituser" name="Username">
+      </mat-form-field>
+    </div>
+    <div>    
+      <mat-form-field appearance="outline" class="usernamee" [color]="passwordComponent.color">
+          <mat-label>Password</mat-label>
+          <input #passworduser matInput placeholder="Enter your Password" [(ngModel)]="editpassword" name="Password" maxlength="15" type="password"  required>
+          <mat-hint align="end">{{passworduser.value.length}}/15</mat-hint>
+        </mat-form-field> 
+    </div>
+   
+
+    <mat-password-strength #passwordComponent  (onStrengthChanged)="onStrengthChanged($event)" 
+    [password]="passworduser.value">
+    </mat-password-strength>
+
+    <mat-password-strength-info [passwordComponent]="passwordComponent">
+    </mat-password-strength-info><br>
+    <div class="container">
+      <button (click)="editusername()" mat-raised-button color="primary" >Register</button>
+      <button mat-button color="primary" routerLink="/" class="align-right">Go back</button>
+    </div>
+  </mat-card-content>
+  </form>
+</mat-card>
+</div>

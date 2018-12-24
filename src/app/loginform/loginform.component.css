@@ -10,14 +10,6 @@
 
 }
 
-
-#login{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 5%;
-    
-}
 mat-card-header{
     display: flex;
     justify-content: center;
