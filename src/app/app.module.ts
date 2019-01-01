@@ -16,13 +16,14 @@ import {AuthguardGuard} from './authguard.guard';
 
 
 import {MatPasswordStrengthModule} from '@angular-material-extensions/password-strength';//NB PASSWORD
-import {MatSlideToggleModule} from '@angular/material';
+import {MatSlideToggleModule,MatDialogModule} from '@angular/material';
 import { FormsModule } from '@angular/forms';//always import formmodules because you are 
                                             //using forms and ngModel apply to forms
 
 import { HttpClientModule } from '@angular/common/http';
 import { RegisterComponent } from './register/register.component';
 import {RegistrationService} from './registration.service';
+import { DialogforgotpComponent } from './dialogforgotp/dialogforgotp.component';
 const approuter:Routes=[
   {path:'',component:LoginformComponent},
    {path:'dashboard',canActivate:[AuthguardGuard],component:DashboardComponent},
@@ -33,7 +34,11 @@ const approuter:Routes=[
     AppComponent,
     LoginformComponent,
     DashboardComponent,
-    RegisterComponent
+    RegisterComponent,
+    DialogforgotpComponent
+  ],
+  entryComponents: [
+    DialogforgotpComponent
   ],
   imports: [
     RouterModule.forRoot(approuter),
@@ -51,7 +56,7 @@ const approuter:Routes=[
     MatNativeDateModule,
     MatIconModule,
     MatSelectModule,
-    MatRadioModule,
+    MatRadioModule,MatDialogModule,
     MatPasswordStrengthModule,
     MatSlideToggleModule,  HttpClientModule
   ],

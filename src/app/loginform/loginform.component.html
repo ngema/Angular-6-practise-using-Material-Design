@@ -30,7 +30,8 @@
 <div >
   <button mat-raised-button color="primary" value="Login" routerLink="/dashboard" class="usernamee">Login</button>
   <div id="login">
-  <button mat-button color="primary" value="password" id="equalposition">Forgot Password??</button><br><br>
+  <button mat-button color="primary" value="password" id="equalposition" (click)="openDialog()">Forgot Password??</button>
+  <br><br>
   <button mat-button color="primary" value="Register" id="l"  routerLink="/register">Register An Acount</button>
    </div>
 </div>
